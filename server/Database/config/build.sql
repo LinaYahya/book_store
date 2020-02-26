@@ -1,13 +1,13 @@
 BEGIN;
 
-DROP TABLE IF EXISTS books , reserved_book cascade;
+DROP TABLE IF EXISTS books cascade;
 
 CREATE TABLE books (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(50) NOT NULL,
   authors VARCHAR(50) NOT NULL,
   category VARCHAR(50),
-  reserved VARCHAR(50) DEFAULT 'false', 
+  reserved VARCHAR(50) DEFAULT 'false'
 );
 
 
