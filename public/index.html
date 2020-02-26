@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Book Sotre</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <ul class="header__nav__menu">
+            <li><a href="#addition">Add Books</a></li>
+            <li><a href="#ourBooks">Our Books</a></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 class="header__title">Book Store</h1>
+      <p>Read to discover the world!</p>
+    </header>
+    <main>
+      <div class="container">
+        <form id="addition" action="/add_book" method="">
+          <label>Book Name:</label>
+          <input type="text" class="book-name" name="name" />
+          <label>Author Name:</label>
+          <input type="text" id="author" name="author" />
+
+          <label for="booksCat">Select the book type:</label>
+          <select id="booksCat">
+            <option value="history">History</option>
+            <option value="science">Science</option>
+            <option value="biography">Biography</option>
+          </select>
+
+          <input type="submit" value="Submit" />
+        </form>
+
+        <section id="ourBooks" class="book-list">
+          <h2 class="title">Books to Read</h2>
+          <ul>
+            <li>
+              <span class="name">Name of the Wind</span>
+              <span class="reserve">Reserve</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
