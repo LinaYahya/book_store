@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const getData = require('../Database/quiry/getData');
-const addBook = require('../Database/quiry/postData')
+const addBook = require('../Database/quiry/postData');
 
 router.get('/books', (req, res) => {
   getData()
