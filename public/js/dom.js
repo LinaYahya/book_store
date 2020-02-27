@@ -47,7 +47,6 @@ const showBooks = (data) => {
     } else if (e.reserved === 'true') {
       reserveBook.textContent = 'Cancel Reserve';
     }
-    
     // reserveBook.addEventListener('click', () => {
     //   fetch('/reserve', {
     //     method: 'POST',
