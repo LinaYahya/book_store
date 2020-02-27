@@ -13,7 +13,7 @@ CREATE TABLE books (
 
 INSERT INTO books (name, authors, category, reserved) VALUES
 ('A Thousand Splendid Suns', 'Khaled Hosseini', 'Novels', 'false'),
-('A Brief History of Humankind', 'Yuval Noah Harari', 'History', 'false'),
+('A Brief History of Humankind', 'Yuval Noah Harari', 'History', 'true'),
 ('A Short History of Nearly Everything', 'Bill Bryson', 'Science', 'false');
 
 COMMIT;

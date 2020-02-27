@@ -2,7 +2,8 @@ const express = require('express');
 const { join } = require('path');
 const compression = require('compression');
 
-const {clientErr , serverErr} = require('./controllers/error');
+const router = require('./controllers');
+const { clientErr, serverErr } = require('./controllers/error');
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(join(__dirname, '..', 'public')));
+
+app.use(router);
 
 app.use(clientErr);
 app.use(serverErr);
