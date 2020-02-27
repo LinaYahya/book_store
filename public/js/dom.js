@@ -1,5 +1,19 @@
 const books = document.getElementById('allBooks');
 
+const add = document.getElementById('add');
+const additionForm = document.getElementById('addition');
+const submitBtn = document.querySelector('.submit');
+
+add.addEventListener('click', () => {
+  additionForm.style.display = 'block';
+});
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  additionForm.style.display = 'none';
+});
+
+
 const showBooks = (data) => {
   data.forEach((e) => {
     const newBook = document.createElement('li');

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -12,21 +12,21 @@
     <div class="container">
       <nav class="header__nav">
         <ul class="header__nav__menu">
-          <li><a href="#addition">Add Books</a></li>
+          <li><a id="add" href="#addition">Add Books</a></li>
           <li><a href="#ourBooks">Our Books</a></li>
         </ul>
       </nav>
     </div>
     <h1 class="header__title">Book Store</h1>
-    <p>Read to discover the world!</p>
+    <p>Read to discover the world! Find the book you want</p>
   </header>
   <main>
     <div class="container">
-      <form id="addition" action="/add_book" method="POST">
+      <form class="input__form" id="addition" action="/add_book" method="POST">
         <label>Book Name:</label><br>
-        <input type="text" class="book-name" name="name" /><br>
+        <input type="text" class="book-name" name="name" required /><br>
         <label>Author Name:</label><br>
-        <input type="text" id="author" name="author" /><br>
+        <input type="text" id="author" name="author" required /><br>
 
         <label for="booksCat">Select the book type:</label><br>
         <select id="booksCat" name="category">
@@ -35,12 +35,19 @@
           <option value="biography">Biography</option>
         </select><br>
 
-        <input type="submit" value="Submit" />
+        <input class="submit" type="submit" value="Submit" />
       </form>
 
       <section id="ourBooks" class="book-list">
         <h2 class="title">Books to Read</h2>
-        <ul id="allBooks"></ul>
+        <ul id="allBooks">
+          <!-- <li class="newBook">
+            <span>Book Name</span>
+            <span>Book Auther</span>
+            <span>Book Type</span>
+            <span></span>
+          </li> -->
+        </ul>
       </section>
     </div>
   </main>

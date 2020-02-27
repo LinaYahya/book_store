@@ -8,45 +8,45 @@ h1,
 h2 {
   font-weight: normal;
 }
+.header {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.63),rgba(20, 20, 20, 0.63)),url('./image/closeup-photo-of-assorted-title-books-1122865.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+}
 .container {
   width: 80%;
   margin: 0 auto;
 }
 
-.header__nav {
-  background-color: rgba(58, 38, 102, 0.5);
-  z-index: 5;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 .header__nav__menu {
+  height: 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.836);
   list-style-type: none;
   display: flex;
   flex-direction: row;
   float: right;
   position: fixed;
   top: 0px;
-  right: 30px;
+  right: 0px;
   font-size: 17px;
   font-weight: bold;
+  align-items: center;
 }
 .header a {
   text-decoration: none;
   padding: 20px;
-  color: #9361bf;
+  color:white;
 }
 
-.header {
-  background: #eee;
-  padding: 10px 0;
-}
-
-.header h1,
-.header p {
-  width: 100%;
-  text-align: center;
-  margin: 10px 0;
+.header h1 {
+  margin-top: 20%;
+  padding-bottom: 5px;
 }
 
 .book-list {
@@ -80,6 +80,67 @@ h2 {
 .reserve:hover {
   background: #333;
 }
+
+/* // Styling the form */
+
+.input__form{
+  display: none;
+  text-align: center;  
+  width: 250px;
+  padding: 10px;
+  padding-left: 20px;
+  border: 1px solid #9361bf;
+  margin: 30px auto;
+}
+.input__form input{
+  padding: 5px;
+  margin: 20px;
+}
+.input__form select{
+  padding: 5px;
+  margin: 20px;
+  background-color: transparent;
+  font-weight: 800;
+  color: #9361bf;
+}
+
+.input__form .submit{
+  border: 1px solid #4b4253;
+  background: #4b4253;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin: 20px 0;
+  color: white;
+}
+
+/* style the book list */
+.book-list .newBook{
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-list .newBook .newBook__name{
+  font-weight: normal;
+  width: 300px;
+}
+.book-list .newBook .newBook__author{
+  width: 150px;
+}
+.book-list .newBook button{
+  border: 1px solid #4b4253;
+  background: #4b4253;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 130px;
+  color:white;                        
+}
+
 .error {
   display: flex;
   justify-content: center;
