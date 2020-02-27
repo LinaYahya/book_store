@@ -2,7 +2,7 @@ const express = require('express');
 const { join } = require('path');
 const compression = require('compression');
 
-const router = require('./controllers');
+const router = require('./routes/index');
 const { clientErr, serverErr } = require('./controllers/error');
 
 const app = express();
