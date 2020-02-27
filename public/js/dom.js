@@ -6,6 +6,7 @@ const showBooks = (data) => {
     const bookName = document.createElement('h3');
     const bookAuthor = document.createElement('span');
     const bookCate = document.createElement('span');
+    const reserveBook = document.createElement('button');
 
     bookName.textContent = e.name;
     bookAuthor.textContent = e.authors;
@@ -15,22 +16,33 @@ const showBooks = (data) => {
     bookName.classList = 'newBook__name';
     bookAuthor.classList = 'newBook__author';
     bookCate.classList = 'newBook__categ';
+    reserveBook.classList = 'newBook__reserve';
+    reserveBook.id = e.id;
+    reserveBook.type = 'button';
+
 
     books.appendChild(newBook);
     newBook.appendChild(bookName);
     newBook.appendChild(bookAuthor);
     newBook.appendChild(bookCate);
+    newBook.appendChild(reserveBook);
+
 
     if (e.reserved === 'false') {
-      const reserveBook = document.createElement('button');
       reserveBook.textContent = 'Reserve Now';
-      reserveBook.classList = 'newBook__reserve';
-      newBook.appendChild(reserveBook);
     } else if (e.reserved === 'true') {
-      const cancelReserve = document.createElement('button');
-      cancelReserve.textContent = 'Cancel Reserve';
-      cancelReserve.classList = 'newBook__cancelR';
-      newBook.appendChild(cancelReserve);
+      reserveBook.textContent = 'Cancel Reserve';
     }
+    
+    // reserveBook.addEventListener('click', () => {
+    //   fetch('/reserve', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ id: e.id }),
+    //   }).then(() => {
+    //     console.log('hi');
+    //   });
+    // });
+
   });
 };
