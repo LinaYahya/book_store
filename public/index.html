@@ -23,10 +23,10 @@
   <main>
     <div class="container">
       <form class="input__form" id="addition" action="/add_book" method="POST">
-        <label>Book Name:</label><br>
-        <input type="text" class="book-name" name="name" required /><br>
-        <label>Author Name:</label><br>
-        <input type="text" id="author" name="author" required /><br>
+        <label for="bName">Book Name:</label><br>
+        <input id="bName" type="text" class="book-name" name="name" required /><br>
+        <label for="bAuthor">Author Name:</label><br>
+        <input id="bAuthor" type="text" id="author" name="author" required /><br>
 
         <label for="booksCat">Select the book type:</label><br>
         <select id="booksCat" name="category">

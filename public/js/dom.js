@@ -1,19 +1,5 @@
 const books = document.getElementById('allBooks');
 
-const add = document.getElementById('add');
-const additionForm = document.getElementById('addition');
-const submitBtn = document.querySelector('.submit');
-
-add.addEventListener('click', () => {
-  additionForm.style.display = 'block';
-});
-
-submitBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  additionForm.style.display = 'none';
-});
-
-
 const showBooks = (data) => {
   data.forEach((e) => {
     const newBook = document.createElement('li');
@@ -46,17 +32,20 @@ const showBooks = (data) => {
       reserveBook.textContent = 'Reserve Now';
     } else if (e.reserved === 'true') {
       reserveBook.textContent = 'Cancel Reserve';
+      newBook.style.color = 'rgb(29, 47, 85)';
+      reserveBook.style.background = 'rgb(29, 47, 85)';
     }
-    
-    // reserveBook.addEventListener('click', () => {
-    //   fetch('/reserve', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ id: e.id }),
-    //   }).then(() => {
-    //     console.log('hi');
-    //   });
-    // });
-
+    reserveBook.addEventListener('click', () => {
+      fetch('/reserve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: e.id }),
+      }).then(() => {
+        if (e.reserved === 'true') {
+          newBook.style.color = ' rgb(29, 47, 85)';
+          reserveBook.style.background = 'rgb(29, 47, 85)';
+        }
+      }).then(() => location.reload());
+    });
   });
 };
