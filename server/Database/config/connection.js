@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'test') {
 } else {
   dbUrl = process.env.DATABASE_URL;
 }
-
+console.log(dbUrl, 'connection')
 const option = {
   connectionString: dbUrl,
   ssl: { rejectUnauthorized: false },
