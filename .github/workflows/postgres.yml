@@ -28,3 +28,10 @@ jobs:
         run: psql -h postgres -d postgres_db -U postgres_user -c 'SELECT 1;'
         env:
           PGPASSWORD: postgres_password
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+      
