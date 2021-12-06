@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'test') {
 
 const option = {
   connectionString: dbUrl,
-  ssl: true,
+  ssl: { rejectUnauthorized: false },
 };
 
 module.exports = new Pool(option);
