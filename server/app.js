@@ -21,5 +21,4 @@ app.use(router);
 app.use(clientErr);
 app.use(serverErr);
 
-
 module.exports = app;
